@@ -1,5 +1,5 @@
 #include "main.h"
-/*
+/**
  * _abs - checks for absolute value
  *
  * @n: parameter to be checked
