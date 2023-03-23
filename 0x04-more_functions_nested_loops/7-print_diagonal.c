@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * print_line - print number of diaginal lines
+ * print_diagonal - print number of diaginal lines
  * @n: number of lines
  * Return: Always 0
  */
