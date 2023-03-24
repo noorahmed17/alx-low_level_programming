@@ -26,11 +26,10 @@ int main(void)
 		{
 			printf("%d ", i);
 		}
-		else 
+		else
 		{
 			printf("%d ", i);
 		}
-		printf(" ");
 	}
 	printf("\n");
 	return (0);
