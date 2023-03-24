@@ -1,15 +1,15 @@
 #include "main.h"
 /**
- * print_most_numbers - print from 0 t0 9 except 2 and 4
+ * print_most_numbers - print from 0 to 9 except 2 and 4
  * Return: Always 0
  */
 void print_most_numbers(void)
 {
-	int i;
+	char i;
 
-	for (i = 48; i < 57; i++)
+	for (i = '0'; i <= '9'; i++)
 	{
-		if (i != 50 && i != 52)
+		if (!(i == '2' || i == '4'))
 		{
 			_putchar(i);
 		}
