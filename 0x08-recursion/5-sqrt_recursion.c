@@ -1,26 +1,19 @@
 #include "main.h"
 /**
  * sqrt_helper - cal the square root
- * @n: function parameter
- * @start: function parameter
- * @end: function parameter
+ * @b: function parameter
+ * @a: function parameter
  * Return: n
  */
-int sqrt_helper(int n, int start, int end)
+int sqrt_helper(int a, int b)
 {
-	int mid = (start + end) / 2;
-
-	if (end < start)
+	if (a * a > b)
 		return (-1);
 
-	if (mid * mid == n)
-		return (mid);
+	else if (a * a == b)
+		return (a);
 
-	else if (mid * mid > n)
-		return (sqrt_helper(n, start, mid - 1));
-
-	else
-		return (sqrt_helper(n, mid + 1, end));
+	return (sqrt_helper(a + 1, b));
 }
 /**
  * _sqrt_recursion - return natural square root of a number
@@ -36,5 +29,5 @@ int _sqrt_recursion(int n)
 		return (n);
 
 	else
-		return (sqrt_helper(n, 1, n));
+		return (sqrt_helper(1, n));
 }
