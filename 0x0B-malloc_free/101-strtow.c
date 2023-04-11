@@ -13,7 +13,7 @@ int count_word(char *s)
 	w = 0;
 	for (c = 0; s[c] != '\0'; c++)
 	{
-		if (s[c] == '')
+		if (s[c] == ' ')
 		{
 			flag = 0;
 		}
@@ -41,7 +41,7 @@ char **strtow(char *str)
 
 	while (*(str + len))
 		len++;
-	words = count_words(str);
+	words = count_word(str);
 	if (words == 0)
 		return (NULL);
 
@@ -50,7 +50,7 @@ char **strtow(char *str)
 		return (NULL);
 	for (i = 0; i <= len; i++)
 	{
-		if (str[i] == '' || str[i] == '\0')
+		if (str[i] == ' ' || str[i] == '\0')
 		{
 			if (c)
 			{
@@ -61,7 +61,7 @@ char **strtow(char *str)
 				while (start < end)
 					*tmp++ = str[start++];
 				*tmp = '\0';
-				martix[k] = tmp - c;
+				matrix[k] = tmp - c;
 				k++;
 				c = 0;
 			}
