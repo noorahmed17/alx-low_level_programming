@@ -24,7 +24,7 @@ int main(int argc, char *argv[])
 	}
 	for (i = 0; i < num_bytes; i++)
 	{
-		printf("%02x ", *((unsigned char*)main + i));
+		printf("%02x ", *((char*)main + i));
 	}
 	printf("\n");
 	return (0);
