@@ -29,7 +29,7 @@ int main(int argc, char *argv[])
 			printf("%02x\n", *((unsigned char *)main));
 			break;
 		}
-		printf("%02x", *((unsigned char *)main + i));
+		printf("%02x ", *((unsigned char *)main + i));
 	}
 	printf("\n");
 	return (0);
