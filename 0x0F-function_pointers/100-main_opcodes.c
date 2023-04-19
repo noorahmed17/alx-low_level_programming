@@ -26,7 +26,7 @@ int main(int argc, char *argv[])
 	{
 		if (i == num_bytes - 1)
 		{
-			printf("%02x\n", *((unsigned char *)main));
+			printf("%02x\n", *((unsigned char *)main + i);
 			break;
 		}
 		printf("%02x ", *((unsigned char *)main + i));
