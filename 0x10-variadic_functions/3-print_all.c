@@ -36,7 +36,8 @@ void print_all(const char * const format, ...)
 					printf("%s%s", sep, s);
 				break;
 			default:
-				break;
+				i++;
+				continue;
 		}
 		sep = ", ";
 		i++;
