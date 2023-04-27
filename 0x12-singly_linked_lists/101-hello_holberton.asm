@@ -1,11 +1,11 @@
-section .data
+data:
     hello_msg db 'Hello, Holberton', 0Ah, 0
     format db '%s', 0Ah, 0
 
-section .text
+text:
     global _start
 
-_start:
+main:
     ; Set up the stack frame
     push rbp
     mov rbp, rsp
