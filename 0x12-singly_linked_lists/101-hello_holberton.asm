@@ -1,26 +1,20 @@
 data:
-    hello_msg db 'Hello, Holberton', 0Ah, 0
-    format db '%s', 0Ah, 0
+    [message db "Hello, Holberton\n", 0]
 
 text:
-    global _start
+	[global main]
+	[extern printf]
 
 main:
-    ; Set up the stack frame
+
     push rbp
     mov rbp, rsp
 
-    ; Load the address of the hello message into rdi
-    lea rdi, [hello_msg]
-
-    ; Load the address of the format string into rsi
-    lea rsi, [format]
-
-    ; Call printf with the arguments
-    mov eax, 0
+    lea rdi, [message]
+    xor eax, eax
     call printf
 
-    ; Clean up and exit
-    mov eax, 0
-    leave
+    mov rsp, rbp
+    pop rbp
+    xor eax, eax
     ret
