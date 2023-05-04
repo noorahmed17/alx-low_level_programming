@@ -12,7 +12,7 @@ unsigned int flip_bits(unsigned long int n, unsigned long int m)
 	unsigned long int num;
 	int i, count = 0;
 
-	if (i = 63; i >= 0; i--)
+	for (i = 63; i >= 0; i--)
 	{
 		num = result >> i;
 		if (num & 1)
